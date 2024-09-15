@@ -156,3 +156,18 @@ input {
 #slide5:checked~.slider__bottom .text-line {
     transform: translateX(-120rem);
 }
+
+@media screen and (max-width: 767px) {
+    .slider__bottom {
+        flex-direction: column;
+    }
+
+    .controlls-label {
+        align-self: center;
+        order: 1;
+    }
+
+    .slider__text {
+        order: 2;
+    }
+}
