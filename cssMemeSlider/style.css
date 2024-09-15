@@ -1,0 +1,193 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+}
+
+.slider {
+    width: 100vw;
+}
+
+.slider__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 1em solid #637963;
+    border-bottom: 1em solid #637963;
+    border-left: 5em solid #637963;
+    border-right: 5em solid #637963;
+    background-color: #637963;
+    border-radius: 8%;
+}
+
+.slider__images {
+    display: flex;
+    transition: all 0.5s ease-in;
+}
+
+.image-item {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.slider__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.slider__text {
+    flex-grow: 2;
+    overflow: hidden;
+    display: flex;
+}
+
+.text-line {
+    display: flex;
+    width: 1000vw;
+    margin-left: 5%;
+    transition: all 0.8s ease;
+}
+
+.text-item {
+    margin: 0;
+    width: 30rem;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.controlls-label {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+
+input {
+    display: none;
+}
+
+.controlls-item {
+    cursor: pointer;
+    width: 1rem;
+    height: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlls-item:hover .controll-point {
+    border-color: white;
+    background-color: white;
+}
+
+.controlls-item:hover .controll-point:checked {
+    border-color: white;
+    background-color: #637963;
+}
+
+.controlls-item:active .controll-point {
+    border-color: #b5c3b5;
+    background-color: #b5c3b5;
+}
+
+.controlls-item:active .controll-point:checked {
+    border-color: white;
+    background-color: #637963;
+}
+
+.controll-point {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 0.1em solid red;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+
+/* selected point */
+
+#slide1:checked~.slider__bottom .controll1 {
+    background-color: #637963;
+}
+
+#slide2:checked~.slider__bottom .controll2 {
+    background-color: #637963;
+}
+
+#slide3:checked~.slider__bottom .controll3 {
+    background-color: #637963;
+}
+
+#slide4:checked~.slider__bottom .controll4 {
+    background-color: #637963;
+}
+
+#slide5:checked~.slider__bottom .controll5 {
+    background-color: #637963;
+}
+
+/* scroll images */
+
+#slide1:checked~.slider__images {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slider__images {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.slider__images {
+    transform: translateX(-200%);
+}
+
+#slide4:checked~.slider__images {
+    transform: translateX(-300%);
+}
+
+#slide5:checked~.slider__images {
+    transform: translateX(-400%);
+}
+
+/* scroll text */
+
+#slide1:checked~.slider__bottom .text-line {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slider__bottom .text-line {
+    transform: translateX(-30rem);
+}
+
+#slide3:checked~.slider__bottom .text-line {
+    transform: translateX(-60rem);
+}
+
+#slide4:checked~.slider__bottom .text-line {
+    transform: translateX(-90rem);
+}
+
+#slide5:checked~.slider__bottom .text-line {
+    transform: translateX(-120rem);
+}
+
+@media screen and (max-width: 767px) {
+    .slider__bottom {
+        flex-direction: column;
+    }
+
+    .controlls-label {
+        align-self: center;
+        order: 1;
+    }
+
+    .slider__text {
+        order: 2;
+    }
+}
