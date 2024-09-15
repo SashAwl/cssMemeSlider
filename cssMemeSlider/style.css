@@ -81,6 +81,26 @@ input {
     align-items: center;
 }
 
+.controlls-item:hover .controll-point {
+    border-color: white;
+    background-color: white;
+}
+
+.controlls-item:hover .controll-point:checked {
+    border-color: white;
+    background-color: #637963;
+}
+
+.controlls-item:active .controll-point {
+    border-color: #b5c3b5;
+    background-color: #b5c3b5;
+}
+
+.controlls-item:active .controll-point:checked {
+    border-color: white;
+    background-color: #637963;
+}
+
 .controll-point {
     display: block;
     width: 0.5rem;
