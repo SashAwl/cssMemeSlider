@@ -105,7 +105,7 @@ input {
     display: block;
     width: 0.5rem;
     height: 0.5rem;
-    border: 1px solid red;
+    border: 0.1em solid red;
     border-radius: 50%;
     background-color: crimson;
 }
